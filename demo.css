@@ -1,0 +1,56 @@
+body {
+  background-color: rgb(241, 242, 246);
+}
+
+.mm-menu {
+  background-color: rgb(67, 74, 84); 
+  color: rgb(255, 255, 255); 
+  -webkit-box-shadow: 0 6px 12px rgba(0,0,0,.175);
+  box-shadow: 0 6px 12px rgba(0,0,0,.175);
+}
+
+.mm-panel li a:hover {
+  color: #fff;
+  background-color: #656d78;
+  outline: 0;
+}
+
+/*
+ * Hide on-canvas menu until initialised
+ */
+#menu:not( .mm-menu ) {
+   display: none;
+}
+
+.btn {
+  margin-top: 10px;
+}
+
+.nav-toggle,
+{
+        font-weight: bold;
+        color: #fff;
+        text-align: center;
+        line-height: 40px;
+        height: 50px;
+        padding: 0 50px;
+}
+
+.nav-toggle a
+{
+        background: center center no-repeat transparent;
+        background-image: url( data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAYAAADE6YVjAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAADhJREFUeNpi/P//PwOtARMDHQBdLGFBYtMq3BiHT3DRPU4YR4NrNAmPJuHRJDyahEeT8Ii3BCDAAF0WBj5Er5idAAAAAElFTkSuQmCC );
+
+        display: block;
+        width: 50px;
+        height: 50px;
+        position: absolute;
+        top: 0;
+        left: 10px;
+}
+.nav-toggle a.right
+{
+        left: auto;
+        right: 10px;
+}
+    
