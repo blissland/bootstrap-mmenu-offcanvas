@@ -28,7 +28,13 @@
             <ul>
               <li><a href="#">First sub-item</a></li>
               <li><a href="#">Second sub-item</a></li>
-              <li><a href="#">Third sub-item</a></li>
+              <li>
+                <a href="#">Level 2 Menu</a>
+                <ul>
+                  <li><a href="#">First sub-item</a></li>
+                  <li><a href="#">Second sub-item</a></li>
+                 </ul>
+              </li>
             </ul>
           </li>
         </ul>
@@ -37,8 +43,8 @@
       <div class="mm-content-right container">
         <div class="row">
           <div class="col-md-12">
-            <h1>Demo 1</h1>
-            <h3>Menu on the left.</h3>
+            <h1>Demo 4</h1>
+            <h3>Zoom effect menu transitions.</h3>
             <h3>Make your browser smaller to view responsive offcanvas menu.</h3>
           </div>
         </div>
@@ -55,7 +61,7 @@
             <a href="submenu-vert.html" class="btn btn-primary btn-lg btn-block">Demo 3: Vertical submenu's</a>
           </div>
           <div class="col-md-6">
-            <a href="menu-zoom.html" class="btn btn-primary btn-lg btn-block">Demo 4: Zoom effect transitions</a>
+            <a href="#" class="btn btn-primary btn-lg btn-block">Demo 4: Zoom effect transitions</a>
           </div>
         </div>
       </div>
@@ -89,8 +95,8 @@
         var $mobmenu = $menu.clone();
         $menu.addClass("hidden-xs");
         $mobmenu.attr( "id", "mobile-menu" );
-        $mobmenu.mmenu();
-        $menu.mmenu({ offCanvas: false });
+        $mobmenu.mmenu({ classes: "mm-zoom-menu mm-zoom-panels" });
+        $menu.mmenu({ offCanvas: false, classes: "mm-zoom-panels" });
 
         <!-- Close mobile menu when resizing browser window -->
         $(window).resize(function() {
