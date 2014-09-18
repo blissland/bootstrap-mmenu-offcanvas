@@ -1,0 +1,69 @@
+/*
+ * Leave room for top navbar
+ */
+body {
+  padding-top: 50px;
+}
+
+/*
+ * Make on-canvas menu smaller
+ * If you want to change the width
+ * of the oncanvas menu then change
+ * all the 200px in this section.
+ */
+@media (min-width: 768px) {
+  nav.mm-menu:not( .mm-offcanvas ) {
+    max-width: 200px;
+  }
+  .mm-content-right {
+	padding-left: 200px;  
+  }
+  .mm-content-left {
+	padding-right: 200px;  
+  }
+}
+
+/*
+ * Navbar transformations
+*/
+.navbar-fixed-top {
+  transition: transform 0.4s ease;
+}
+
+html.mm-opening .navbar-fixed-top  {
+  -webkit-transform: translate(80%, 0);
+  transform: translate(80%, 0);
+}
+
+@media all and (max-width: 175px) {
+  html.mm-opening .navbar-fixed-top  {
+    -webkit-transform: translate(140px, 0);
+    transform: translate(140px, 0); 
+  } 
+}
+
+@media all and (min-width: 550px) {
+  html.mm-opening .navbar-fixed-top  {
+    -webkit-transform: translate(440px, 0);
+    transform: translate(440px, 0); 
+  } 
+}
+
+html.mm-right.mm-opening .navbar-fixed-top  {
+  -webkit-transform: translate(-80%, 0);
+  transform: translate(-80%, 0);
+}
+
+@media all and (max-width: 175px) {
+  html.mm-right.mm-opening .navbar-fixed-top  {
+    -webkit-transform: translate(-140px, 0);
+    transform: translate(-140px, 0); 
+  } 
+}
+
+@media all and (min-width: 550px) {
+  html.mm-right.mm-opening .navbar-fixed-top  {
+    -webkit-transform: translate(-440px, 0);
+    transform: translate(-440px, 0); 
+  } 
+}

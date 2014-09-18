@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="">
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>bootstrap-mmenu-offcanvas</title>
+
+    <!-- Page styles -->
+    <link type="text/css" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" />
+    <link type="text/css" rel="stylesheet" href="http://mmenu.frebsite.nl/mmenu/css/jquery.mmenu.all.css" />
+    <link type="text/css" rel="stylesheet" href="bootstrap-mmenu-offcanvas.css" />
+    <link type="text/css" rel="stylesheet" href="demo.css" />
+  </head>
+
+  <body>
+    <div id="page">
+
+      <nav id="menu" class="mm-right">
+        <ul>
+          <li><a href="#"><span class="glyphicon glyphicon-flash"></span> Sample Link 1</a></li>
+          <li><a href="#"><span class="glyphicon glyphicon-tower"></span> Sample Link 2</a></li>
+          <li><a href="#"><span class="glyphicon glyphicon-bell"></span> Sample Link 3</a></li>
+          <li><a href="#"><span class="glyphicon glyphicon-plane"></span> Sample Link 4</a></li>
+          <li>
+            <a href="#"><span class="glyphicon glyphicon-leaf"></span> Level 1 Menu</a>
+            <ul>
+              <li><a href="#">First sub-item</a></li>
+              <li><a href="#">Second sub-item</a></li>
+              <li><a href="#">Third sub-item</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="mm-content-left container">
+        <div class="row">
+          <div class="col-md-12">
+            <h1>Demo 2</h1>
+            <h3>Menu on the right.</h3>
+            <h3>Make your browser smaller to view responsive offcanvas menu.</h3>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <a href="index.html" class="btn btn-primary btn-lg btn-block">Demo 1: Menu left</a>
+          </div>
+          <div class="col-md-6">
+            <a href="menu-right.html" class="btn btn-primary btn-lg btn-block">Demo 2: Menu right</a>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <a href="#" class="btn btn-primary btn-lg btn-block">Demo 3: TODO</a>
+          </div>
+          <div class="col-md-6">
+            <a href="#" class="btn btn-primary btn-lg btn-block">Demo 4: TODO</a>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <a href="#" class="btn btn-primary btn-lg btn-block">Demo 5: TODO</a>
+          </div>
+          <div class="col-md-6">
+            <a href="#" class="btn btn-primary btn-lg btn-block">Demo 6: TODO</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- IMPORTANT: this tag must NOT be a <div> otherwise mmenu will wrap the navbar in the main page -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <a href="#" class="navbar-brand"><strong>Project name</strong></a>
+          <div class="nav-toggle visible-xs">
+            <a href="#mobile-menu" class="right"></a>
+          </div>
+        </div>
+
+        <div class="collapse navbar-collapse" role="navigation">
+          <ul class="nav navbar-nav navbar-right hidden-xs">
+            <li><a href="#">Logged in as <strong>Admin</strong></a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script type="text/javascript" src="http://mmenu.frebsite.nl/mmenu/js/jquery.mmenu.min.all.js"></script>
+    <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function() {
+        var $menu = $("nav#menu");
+        var $mobmenu = $menu.clone();
+        $menu.addClass("hidden-xs");
+        $mobmenu.attr( "id", "mobile-menu" );
+        $mobmenu.mmenu({
+          offCanvas: {
+            position  : "right"
+          }
+        });
+        $menu.mmenu({ 
+          offCanvas: false ,
+        });
+
+        <!-- Close mobile menu when resizing browser window -->
+        $(window).resize(function() {
+          if ($(this).width() > 767) {
+            $mobmenu.trigger("close.mm");
+          }
+        });
+      });
+    </script>
+
+  </body>
+</html>
