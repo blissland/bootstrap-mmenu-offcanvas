@@ -2,6 +2,10 @@ body {
   background-color: rgb(241, 242, 246);
 }
 
+#page {
+  min-height: 500px;
+}
+
 .mm-menu {
   background-color: rgb(67, 74, 84); 
   color: rgb(255, 255, 255); 
@@ -48,6 +52,7 @@ body {
         top: 0;
         left: 10px;
 }
+
 .nav-toggle a.right
 {
         left: auto;
