@@ -5,6 +5,8 @@ Integration of jQuery mmenu plugin with Bootstrap 3. Provides your web app with 
 
 Provides fixes for various issues related to having a static navbar together with the mmenu off-canvas transformations.
 
+Does not work on IE 8 and below.
+
 More info on mmenu can be found here: http://mmenu.frebsite.nl/
 
 Live Demo: http://blissland.github.io/bootstrap-mmenu-offcanvas/
