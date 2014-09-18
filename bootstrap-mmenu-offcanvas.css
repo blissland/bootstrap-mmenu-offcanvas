@@ -71,7 +71,7 @@ html.mm-right.mm-opening .navbar-fixed-top  {
 /*
  * On-canvas submenu zoom effect
  */
-.mm-menu.mm-horizontal:not( .mm-offcanvas ) > .mm-panel {
+.mm-menu.mm-horizontal.mm-zoom-panels:not( .mm-offcanvas ) > .mm-panel {
   -webkit-transform: scale(1.5, 1.5) translateX(100%);
   transform: scale(1.5, 1.5) translateX(100%);
   -webkit-transform-origin: left center;
@@ -79,11 +79,11 @@ html.mm-right.mm-opening .navbar-fixed-top  {
   -webkit-transition-property: -webkit-transform, left;
   transition-property: transform, left;
 }
-.mm-menu.mm-horizontal:not( .mm-offcanvas ) > .mm-panel.mm-opened {
+.mm-menu.mm-horizontal.mm-zoom-panels:not( .mm-offcanvas ) > .mm-panel.mm-opened {
   -webkit-transform: scale(1, 1) translateX(0%);
   transform: scale(1, 1) translateX(0%);
 }
-.mm-menu.mm-horizontal:not( .mm-offcanvas ) > .mm-panel.mm-opened.mm-subopened {
+.mm-menu.mm-horizontal.mm-zoom-panels:not( .mm-offcanvas ) > .mm-panel.mm-opened.mm-subopened {
   -webkit-transform: scale(0.7, 0.7) translateX(-30%);
   transform: scale(0.7, 0.7) translateX(-30%);
 }
