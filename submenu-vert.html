@@ -37,8 +37,8 @@
       <div class="mm-content-right container">
         <div class="row">
           <div class="col-md-12">
-            <h1>Demo 1</h1>
-            <h3>Menu on the left.</h3>
+            <h1>Demo 3</h1>
+            <h3>Vertical dropdown submenu's.</h3>
             <h3>Make your browser smaller to view responsive offcanvas menu.</h3>
           </div>
         </div>
@@ -97,8 +97,8 @@
         var $mobmenu = $menu.clone();
         $menu.addClass("hidden-xs");
         $mobmenu.attr( "id", "mobile-menu" );
-        $mobmenu.mmenu();
-        $menu.mmenu({ offCanvas: false });
+        $mobmenu.mmenu({ slidingSubmenus: false });
+        $menu.mmenu({ offCanvas: false, slidingSubmenus: false });
 
         <!-- Close mobile menu when resizing browser window -->
         $(window).resize(function() {
